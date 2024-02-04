@@ -1,0 +1,68 @@
+<xzs-header></xzs-header>
+
+<view class="banner">
+  <swiper
+    previous-margin="30rpx"
+    circular
+    autoplay
+    interval="3000"
+    indicator-dots
+    indicator-active-color="#BDA066"
+    indicator-color="rgba(255,255,255,0.3)"
+  >
+    <swiper-item>
+      <image src="/images/banner0.jpg" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner1.jpg" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner2.jpg" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner3.jpg" mode=""/>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="scrollNav">
+  <scroll-view scroll-x>
+    <navigator open-type="reLaunch" url="/pages/classify/classify?idx={{index}}" class="item" wx:for="{{navArr}}" wx:key="_id">
+      <view class="pic">
+        <image src="{{item.icon}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.classname}}
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+
+<view class="about">
+  <view class="pubTitle">
+    <view class="en">introduce</view>
+    <view class="cn">茶美文化馆简介</view>
+    <view class="line"></view>
+  </view>
+
+  <view class="content">
+    <view class="row">白茶，属微发酵茶，是中国茶类中的特殊珍品。 因成品茶多为芽头，满披白毫，如银似雪而得名。 中国六大茶类之一。 白茶不经杀青或揉捻，只经过晒或文火干燥后加工的茶，具有外形芽毫完整，满身披毫，毫香清鲜，汤色黄绿清澈，滋味清淡回甘的品质特点。</view>
+    <view class="row">白茶，属微发酵茶，是中国茶类中的特殊珍品。 因成品茶多为芽头，满披白毫，如银似雪而得名。 中国六大茶类之一。 白茶不经杀青或揉捻，只经过晒或文火干燥后加工的茶，具有外形芽毫完整，满身披毫，毫香清鲜，汤色黄绿清澈，滋味清淡回甘的品质特点。</view>
+    <view class="row">白茶，属微发酵茶，是中国茶类中的特殊珍品。 因成品茶多为芽头，满披白毫，如银似雪而得名。 中国六大茶类之一。 白茶不经杀青或揉捻，只经过晒或文火干燥后加工的茶，具有外形芽毫完整，满身披毫，毫香清鲜，汤色黄绿清澈，滋味清淡回甘的品质特点。</view>
+  </view>
+</view>
+
+<view class="news">
+  <view class="pubTitle">
+    <view class="en">News</view>
+    <view class="cn">品牌资讯</view>
+    <view class="line"></view>
+  </view>
+  <view class="content">
+    <view class="box" wx:for="{{newsArr}}" wx:key="_id">
+    <xzs-news-item item="{{item}}"></xzs-news-item>
+    </view>
+  </view>
+</view>
+
+<xzs-footer></xzs-footer>
